@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #cce3ff, #e0c3fc);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.joke-box {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.setup {
+    font-size: 18px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.punchline {
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+}
+
+.loading {
+    font-size: 16px;
+    color: #666;
+    animation: pulse 1.5s infinite;
+}
+
+.joke-btn {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.joke-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(60, 60, 255, 0.3);
+}
+
+.joke-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.joke-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
